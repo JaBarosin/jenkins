@@ -1,3 +1,11 @@
+# Takes in the outfile from cbctl validate and writes a brief outfile summary of 
+#  CBC Policy: <what cbctl policy was applied that triggered the violations>
+#  Rules Violated: <what CBC-cbctl policy rule was violated
+#
+# If no violations, writes confiromation message to same file.
+# 
+# jbarosin - 5/27/2021
+
 import json
 import sys
 
