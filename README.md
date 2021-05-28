@@ -21,6 +21,8 @@ Confirm docker engine is installed:
           --volume /var/jenkins:/var/jenkins_home \
 	        --volume /var/run/docker.sock:/var/run/docker.sock \
           <image/name>
+
+Initial login password can be found by running "docker exec jenkins-server cat /var/jenkins_home/secrets/initialAdminPassword"
 	  
 **OR - Run as service**
 
