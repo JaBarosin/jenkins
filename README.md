@@ -9,8 +9,7 @@ Prior to building your jenkins container:
 
 Build image  - ```sudo docker build . -t <image-name>```
 
-Confirm docker engine is installed:
-  - docker --version
+Confirm docker engine is installed and up to date - ```docker --version```
 
 **Run with docker:**
 ```
