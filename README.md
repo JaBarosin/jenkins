@@ -42,7 +42,7 @@ If integrating with Slack add:
 
 If using the Jenkinsfile in [JaBarosin/NodeApp](https://github.com/JaBarosin/NodeApp) demo, you will need to add creds for a few tools.
  
-- For Docker needs a username/password credential (can do this via the Jenkins UI at *<your-jenkins-docker-server IP/credentials/store/system/domain/_/* )
+- For Docker needs a username/password credential (can do this via the Jenkins UI at *your-jenkins-docker-server IP/credentials/store/system/domain/_/*
 - For [Slack secret text credential](https://plugins.jenkins.io/slack/) 
 
 Source of setup steps:
