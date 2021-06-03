@@ -39,6 +39,20 @@ Create service for systemd:
 Start jenkins-docker as service:
   - sudo systemctl daemon-reload
   - sudo systemctl start jenkins-docker
-  
+
+
+**Plugins**
+Once you have your Jenkins server running. Go to [Managed Jenkins] > [Manage Plugins] to add additional plugins after initial setup.
+
+If integrating with Slack add:
+- Slack Notification
+- Global Slack Notification
+
+**Credentials**
+If using the Jenkinsfile in [jabarosin/NodeApp](https://github.com/JaBarosin/NodeApp) demo, you will need to add creds for a few tools.
+ 
+- For [Slack secret text credential](https://plugins.jenkins.io/slack/) 
+- Docker needs a username/password credential (can do this via the Jenkins UI at *<your-jenkins-docker-server IP/credentials/store/system/domain/_/* )
+
 Source of setup steps:
 https://computingforgeeks.com/running-jenkins-server-in-docker-container-systemd/
