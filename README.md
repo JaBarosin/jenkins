@@ -1,9 +1,7 @@
 # jenkins docker server setup
-Testing jenkins-server 
-
 **Setup and Build**
 
-These instructions run your container with docker.sock mounted as volume so jenkins server can also run docker in the container.
+These instructions will help you setup, build and run your container with docker.sock mounted as volume so jenkins server can also run docker in the container.
 
 Prior to building your jenkins container:
   - Clone this repository
