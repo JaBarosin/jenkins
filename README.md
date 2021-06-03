@@ -13,7 +13,7 @@ Confirm docker engine is installed:
   - docker --version
 
 **Run with docker:**
-
+```
   - docker run \
           --name jenkins-server \
           --publish 8080:8080 \
@@ -21,13 +21,14 @@ Confirm docker engine is installed:
           --volume /var/jenkins:/var/jenkins_home \
 	        --volume /var/run/docker.sock:/var/run/docker.sock \
           <image/name>
+```
 
 Initial login password can be found by running "docker exec jenkins-server cat /var/jenkins_home/secrets/initialAdminPassword"
 
 Update the cbctl creds:
 - Copy the commands provided in the CLI config setup guide.
-- attach to your jenkins-server - '<docker exec -it jenkins-server /bin/bash>'
-- paste in cli config details and press enter.  Confirm that they are stored on your jenkins-server by running - '<cat ~/.cbctl/cbctl.yaml>'
+- attach to your jenkins-server - ```docker exec -it jenkins-server /bin/bash```
+- paste in cli config details and press enter.  Confirm that they are stored on your jenkins-server by running - ```cat ~/.cbctl/cbctl.yaml```
 	
 	  
 **OR - Run as service**
