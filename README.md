@@ -3,13 +3,13 @@ These instructions will help you setup, build and run your container with docker
 
 **Setup and Build**
 
-Prior to building your jenkins container:
+- Prior to building your jenkins container:
   - Clone this repository
   - Add cbctl binary to your app folder
 
-Build image  - ```sudo docker build . -t <image-name>```
+- Build image  - ```sudo docker build . -t <image-name>```
 
-Confirm docker engine is installed and up to date - ```docker --version```
+- Confirm docker engine is installed and up to date - ```docker --version```
 
 **Run with docker:**
 ```
@@ -22,7 +22,7 @@ Confirm docker engine is installed and up to date - ```docker --version```
           <image/name>
 ```
 
-Initial login password can be found by running ```docker exec jenkins-server cat /var/jenkins_home/secrets/initialAdminPassword```
+- Once your jenkins server is up and running, the homepage will require an initial login password which can be found by running ```docker exec jenkins-server cat /var/jenkins_home/secrets/initialAdminPassword```
 
 Update the cbctl creds:
 - Copy the commands provided in the CLI config setup guide.
@@ -32,7 +32,7 @@ Update the cbctl creds:
 
 **Jenkins Plugins**
 
-Once you have your Jenkins server running. Go to [Managed Jenkins] > [Manage Plugins] to add additional plugins after initial setup.
+Once logged in, go to [Managed Jenkins] > [Manage Plugins] to add additional plugins after initial setup.
 
 If integrating with Slack add:
 - Slack Notification
