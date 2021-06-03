@@ -7,7 +7,7 @@ Prior to building your jenkins container:
   - Clone this repository
   - Add cbctl binary to your app folder
 
-Build image  - '<sudo docker build . -t <image-name>>'
+Build image  - ```sudo docker build . -t <image-name>```
 
 Confirm docker engine is installed:
   - docker --version
@@ -23,29 +23,12 @@ Confirm docker engine is installed:
           <image/name>
 ```
 
-Initial login password can be found by running "docker exec jenkins-server cat /var/jenkins_home/secrets/initialAdminPassword"
+Initial login password can be found by running ```docker exec jenkins-server cat /var/jenkins_home/secrets/initialAdminPassword```
 
 Update the cbctl creds:
 - Copy the commands provided in the CLI config setup guide.
 - attach to your jenkins-server - ```docker exec -it jenkins-server /bin/bash```
 - paste in cli config details and press enter.  Confirm that they are stored on your jenkins-server by running - ```cat ~/.cbctl/cbctl.yaml```
-	
-	  
-**OR - Run as service**
-
-Setup jenkins user:
-  - sudo groupadd --system jenkins
-  - sudo useradd -s /sbin/nologin --system -g jenkins jenkins
-  - sudo mkdir /var/jenkins
-  - sudo chown -R 1000:1000 /var/jenkins
-
-Create service for systemd:
-  - sudo vi /etc/systemd/system/jenkins-docker.service
-  - copy in jenkins-docker.service and update image name
-
-Start jenkins-docker as service:
-  - sudo systemctl daemon-reload
-  - sudo systemctl start jenkins-docker
 
 
 **Plugins**
@@ -58,8 +41,8 @@ If integrating with Slack add:
 **Credentials**
 If using the Jenkinsfile in [JaBarosin/NodeApp](https://github.com/JaBarosin/NodeApp) demo, you will need to add creds for a few tools.
  
+- For Docker needs a username/password credential (can do this via the Jenkins UI at *<your-jenkins-docker-server IP/credentials/store/system/domain/_/* )
 - For [Slack secret text credential](https://plugins.jenkins.io/slack/) 
-- Docker needs a username/password credential (can do this via the Jenkins UI at *<your-jenkins-docker-server IP/credentials/store/system/domain/_/* )
 
 Source of setup steps:
 https://computingforgeeks.com/running-jenkins-server-in-docker-container-systemd/
