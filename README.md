@@ -1,14 +1,13 @@
-# jenkins docker server setup
-**Setup and Build**
-
+# Jenkins Docker server setup
 These instructions will help you setup, build and run your container with docker.sock mounted as volume so jenkins server can also run docker in the container.
+
+**Setup and Build**
 
 Prior to building your jenkins container:
   - Clone this repository
   - Add cbctl binary to your app folder
 
-Build image:
-  - sudo docker build . -t <image-name>
+Build image  - '<sudo docker build . -t <image-name>>'
 
 Confirm docker engine is installed:
   - docker --version
