@@ -11,7 +11,7 @@ These instructions will help you setup, build and run your container with docker
 
 - Confirm docker engine is installed and up to date - ```docker --version```
 
-**Run with docker:**
+**Option 1 - Quick start run with docker:**
 ```
   - docker run \
           --name jenkins-server \
@@ -28,6 +28,21 @@ Update the cbctl creds:
 - Copy the commands provided in the CLI config setup guide.
 - attach to your jenkins-server - ```docker exec -it jenkins-server /bin/bash```
 - paste in cli config details and press enter.  Confirm that they are stored on your jenkins-server by running - ```cat ~/.cbctl/cbctl.yaml```
+
+
+**Option 2 - Setup Jenkins-server to run as Service**
+
+Setup jenkins user:
+  - sudo groupadd --system jenkins
+  - sudo useradd -s /sbin/nologin --system -g jenkins jenkins
+  - sudo mkdir /var/jenkins
+  - sudo chown -R 1000:1000 /var/jenkins
+Create service for systemd:
+  - sudo vi /etc/systemd/system/jenkins-docker.service
+  - copy in jenkins-docker.service and update image name
+Start jenkins-docker as service:
+  - sudo systemctl daemon-reload
+  - sudo systemctl start jenkins-docker
 
 
 **Jenkins Plugins**
