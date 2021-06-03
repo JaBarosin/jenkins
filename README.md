@@ -31,7 +31,8 @@ Update the cbctl creds:
 - paste in cli config details and press enter.  Confirm that they are stored on your jenkins-server by running - ```cat ~/.cbctl/cbctl.yaml```
 
 
-**Plugins**
+**Jenkins Plugins**
+
 Once you have your Jenkins server running. Go to [Managed Jenkins] > [Manage Plugins] to add additional plugins after initial setup.
 
 If integrating with Slack add:
@@ -39,6 +40,7 @@ If integrating with Slack add:
 - Global Slack Notification
 
 **Credentials**
+
 If using the Jenkinsfile in [JaBarosin/NodeApp](https://github.com/JaBarosin/NodeApp) demo, you will need to add creds for a few tools.
  
 - For Docker needs a username/password credential (can do this via the Jenkins UI at *<your-jenkins-docker-server IP/credentials/store/system/domain/_/* )
