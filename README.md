@@ -1,13 +1,15 @@
-# myjenkins
+# jenkins docker server setup
 Testing jenkins-server 
 
-  - docker.sock mounted as volume so jenkins server can also run docker
-  - Add cbctl to app folder (or to your /var/jenkins/) before building to copy to jenkins server. After jenkins is running remember to update cbctl creds
+**Setup and Build**
+These instructions run your container with docker.sock mounted as volume so jenkins server can also run docker in the container.
 
-**Setup**
+Prior to building your jenkins container:
+  - Clone this repository
+  - Add cbctl binary to your app folder
 
 Build image:
-  - sudo docker build . -t <image/name>
+  - sudo docker build . -t <image-name>
 
 Confirm docker engine is installed:
   - docker --version
@@ -23,6 +25,12 @@ Confirm docker engine is installed:
           <image/name>
 
 Initial login password can be found by running "docker exec jenkins-server cat /var/jenkins_home/secrets/initialAdminPassword"
+
+Update the cbctl creds:
+- Copy the commands provided in the CLI config setup guide.
+- attach to your jenkins-server - '<docker exec -it jenkins-server /bin/bash>'
+- paste in cli config details and press enter.  Confirm that they are stored on your jenkins-server by running - '<cat ~/.cbctl/cbctl.yaml>'
+	
 	  
 **OR - Run as service**
 
