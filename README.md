@@ -49,7 +49,7 @@ If integrating with Slack add:
 - Global Slack Notification
 
 **Credentials**
-If using the Jenkinsfile in [jabarosin/NodeApp](https://github.com/JaBarosin/NodeApp) demo, you will need to add creds for a few tools.
+If using the Jenkinsfile in [JaBarosin/NodeApp](https://github.com/JaBarosin/NodeApp) demo, you will need to add creds for a few tools.
  
 - For [Slack secret text credential](https://plugins.jenkins.io/slack/) 
 - Docker needs a username/password credential (can do this via the Jenkins UI at *<your-jenkins-docker-server IP/credentials/store/system/domain/_/* )
