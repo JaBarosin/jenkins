@@ -12,14 +12,17 @@ These instructions will help you setup, build and run your container with docker
 - Confirm docker engine is installed and up to date - ```docker --version```
 
 **Option 1 - Quick start run with docker:**
+
+NOTE: replace <image/name> with your <you-repository/jenkins-container>
+
 ```
-  - docker run \
-          --name jenkins-server \
-          --publish 8080:8080 \
-          --publish 50000:50000 \
-          --volume /var/jenkins:/var/jenkins_home \
-	        --volume /var/run/docker.sock:/var/run/docker.sock \
-          <image/name>
+docker run \
+  --name jenkins-server \
+  --publish 8080:8080 \
+  --publish 50000:50000 \
+  --volume /var/jenkins:/var/jenkins_home \
+	--volume /var/run/docker.sock:/var/run/docker.sock \
+  <image/name>
 ```
 
 - Once your jenkins server is up and running, the homepage will require an initial login password which can be found by running ```docker exec jenkins-server cat /var/jenkins_home/secrets/initialAdminPassword```
