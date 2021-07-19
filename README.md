@@ -30,7 +30,7 @@ docker run \
 Update the cbctl creds:
 - Copy the commands provided in the CLI config setup guide.
 - attach to your jenkins-server - ```docker exec -it jenkins-server /bin/bash```
-- paste in cli config details and press enter.  Confirm that they are stored on your jenkins-server by running - ```cat ~/.cbctl/cbctl.yaml```
+- paste in cli config details and press enter.  Confirm that they are stored on your jenkins-server by running - ```cat ~/.cbctl/.cbctl.yaml```
 
 
 **Option 2 - Setup Jenkins-server to run as Service**
