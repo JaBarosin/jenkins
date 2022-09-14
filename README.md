@@ -6,7 +6,6 @@ These instructions will help you setup, build and run your container with docker
 - Prior to building your jenkins container:
   - Clone this repository
   - Add cbctl binary to your app folder
-    - or use cbctl container image.
 
 - Build image  - ```sudo docker build . -t <image-name>```
 
